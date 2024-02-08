@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Resume Maker</title>
+        <title>CV de Filipe Martins</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="../static/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../static/css/style.css">
+        <script src="../static/js/javascript.js"></script>
+
     </head>
     <body>
         <header class="h_color" id="head">
@@ -17,13 +19,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="logo">
-                                <h2>RESUME MAKER</h2>
-                                  <p>Attractive resumes Download and Use Now!</p> 
+                                <h2>CV Filipe Martins</h2>
+                                  <p>Je recherche une alternance dans le pentest.</p> 
                                 </div>
                                 <div class="nav_button_right">
                                 <a  class="btn btn-primary" href="#popup1">Add your Data</a>
                                 <input type="button" onclick="printDiv()" class="btn btn-warning" value="Print Resume">
-                                <a class="btn btn-info" href="resume_template">More Resume Templates</a>
+								<a class="btn btn-info" href="resume_template">More Resume Templates</a>
                             </div>
                         </div>
                     </div>
@@ -32,81 +34,95 @@
             </div>
         </header>
 
-       <section id="resume_2">
+       <section id="resume_1">
            <div class="container">
                 <div class="resume_1">
                     <div class="row">
                         <div class="col-md-12">
                             <div>
-                                <h1 id="uname">Yash Bajaj</h1>
+                                <h1 id="uname">Filipe Martins</h1>
                                <!-- <p>It Project Manager</p>-->
-                                <p style="text-align: justify" id="uabout">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p style="text-align: justify" id="uabout">Après avoir décroché mon BTS SIO option SISR j'ai continué mes études en me lançant dansune licence d’informatique générale (ASSI) afi n d'avoir toutes les compétences pourpoursuivre vers un Bac+5 en sécurité. Admis au Mastère Cyberdéfense de l’école Hexagone(Versailles, 78646), je recherche une alternance pour suivre mon cursus.Au terme de mon apprentissage je souhaiterai devenir Red Teamer pour allier pénétration physique & virtuelle.</p>
                             </div>
                         </div>
-
-                        <div class="col-md-4" style="float: left;">
+                        <div class="col-md-3" style="float: left;">
                             <img src="../static/img/resume_1/about_us_icon.png" width="40px"><span style="padding: 12px;font-weight: 600">ABOUT ME</span>
-                            <div class="" style="border-top: rgb(130, 146, 238) solid 1px;margin-top: 20px;"></div>                        
-                            <div style="margin-top: 20px">
-                                <div style="margin-bottom: 15px;"><img src="../static/img/resume_1/birthday.png" width="30px"><span style="padding: 12px;font-weight: 600;" id="udob">May 07, 1998</span></div>
-                                <div style="margin-bottom: 15px;"><img src="../static/img/resume_1/phone.png" width="30px"><span style="padding: 12px;font-weight: 600" id="uphnum">+91 9726 576 370</span></div>
-                                <div style="margin-bottom: 15px;"><img src="../static/img/resume_1/location.png" width="30px"><span style="padding: 12px;font-weight: 600" id="ulocation">Surat, Gujarat</span></div>
-                                <div style="margin-bottom: 15px;"><img src="../static/img/resume_1/email.png" width="30px"><span style="padding: 12px;font-weight: 600" id="uemail">bajajyash428@gmail.com</span></div>
+                        </div>
+                        <div class="col-md-9" style="border-top: rgb(130, 146, 238) solid 1px;margin-top: 20px;float: right"></div>
+                        
+                        <div class="col-md-12" style="margin-top: 25px">
+                            <div style="margin-bottom: 50px">
+                            <div class="col-md-4" style="float: left;">
+                                <img src="../static/img/resume_1/birthday.png" width="30px"><span style="padding: 12px;font-weight: 600" id="udob">28 juin 2003</span>
                             </div>
-
-                            <div style="margin-top: 25px" >
-                                    <img src="../static/img/resume_1/computer.png" width="40px"><span style="padding: 12px;font-weight: 600">PERSONAL SKILLS</span>
-                                </div>
-                                <div style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 20px;"></div>
-                                <div class="col-md-12" style="width: 100%;margin-top: 12px">
-                                    <ul id="skills_data_li">
-                                        <li style="font-size:18px;margin-bottom: 5px">Developed or implemented new procedures or systems</li>
-                                        <li style="font-size:18px;margin-bottom: 5px">Saved money for the company</li>
-                                    </ul>
+                            <div class="col-md-8" style="float: left;">
+                                <img src="../static/img/resume_1/phone.png" width="30px"><span style="padding: 12px;font-weight: 600" id="uphnum">+33 6 33 33 33 33</span>
                             </div>
-
-                            <div style="margin-top: 20px" >
-                                    <img src="../static/img/resume_1/personal_info.png" width="40px"><span style="padding: 12px;font-weight: 600">PERSONAL DETAILS</span>
+                        </div>
+                            <div>
+                            <div class="col-md-4" style="float: left;">
+                                <img src="../static/img/resume_1/location.png" width="30px"><span style="padding: 12px;font-weight: 600" id="ulocation">Nogent-sur-marne</span>
                             </div>
-                            <div style= "border-top: rgb(130, 146, 238) solid 1px;margin-top: 12px;"></div>
-                            <div style="margin-top: 12px">
-                                <p id="fathername">Father's Name   :</p>
-                                <p id="mothername">Mother's Name</p>
-                                <p id="permanentaddress">Permanent Address    :    </p>
+                            <div class="col-md-8" style="float: left;">
+                                <img src="../static/img/resume_1/email.png" width="30px"><span style="padding: 12px;font-weight: 600" id="uemail">f.martins@campusmontsouris.fr</span>
+                            </div>
                             </div>
                         </div>
 
-                        <div class="col-md-8" style="padding: 10px">
+                        <div class="col-md-12" style="margin-top: 20px;padding: 10px">
                             <h5>Career Objectives</h5>
                             <p style="text-align: justify" id="ucareerobject">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, </p>
-                            <div style="margin-top: 15px" >
-                                    <img src="../static/img/resume_1/education.png" width="40px"><span style="padding: 12px;font-weight: 600">EDUCATION</span>
-                            </div>
-
-
-                            <div class="" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 12px;"></div>
-                            <div class="">
-                                <table id="education_data_table" style="width: 100%;margin-top: 12px">
-                                        <tr>
-                                            <td>
-                                                <span style='font-weight: 600;font-size: 20px'>B.Tech Computer Science
-                                                 </span> <br>Uka Tarsadia University</td>
-                                            <td>Graduate, May 2020</td>
-                                        </tr>
-                                </table>
-                            </div> 
-
-                            <div style="margin-top: 15px" >
-                                    <img src="../static/img/resume_1/achiements.png" width="40px"><span style="padding: 12px;font-weight: 600">ACHIEVEMENTS</span>
-                                </div>
-                                <div class="" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 12px;"></div>    
-                                <div style="width: 100%;margin-top: 12px">
-                                    <ul id="achivements_data_li">
-                                        <li style="font-size:18px;margin-bottom: 5px">Developed or implemented new procedures or systems</li>
-                                        <li style="font-size:18px;margin-bottom: 5px">Saved money for the company</li>
-                                    </ul>
-                                </div>
                         </div>
+
+                        <div class="col-md-3" style="float: left;margin-top: 20px" >
+                                <img src="../static/img/resume_1/education.png" width="40px"><span style="padding: 12px;font-weight: 600">EDUCATION</span>
+                        </div>
+                        <div class="col-md-9" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 40px;float: right"></div>
+                        <div class="col-md-12">
+                            <table id="education_data_table" style="width: 100%;margin-top: 12px">
+                                    <tr>
+                                        <td>
+                                            <span style='font-weight: 600;font-size: 20px'>Tech Computer Science
+                                             </span> <br>Campus Montsouris</td>
+                                        <td>Graduate, Septembre 2024</td>
+                                    </tr>
+                            </table>
+                        </div>    
+                            
+
+                        <div class="col-md-4" style="float: left;margin-top: 20px" >
+                            <img src="../static/img/resume_1/achiements.png" width="40px"><span style="padding: 12px;font-weight: 600">ACHIEVEMENTS</span>
+                        </div>
+                        <div class="col-md-8" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 40px;float: right"></div>                                <div class="col-md-12" style="width: 100%;margin-top: 12px">
+                            <ul id="achivements_data_li">
+                                <li style="font-size:18px;margin-bottom: 5px">Developed or implemented new procedures or systems</li>
+                                <li style="font-size:18px;margin-bottom: 5px">Saved money for the company</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-md-4" style="float: left;margin-top: 20px" >
+                            <img src="../static/img/resume_1/computer.png" width="40px"><span style="padding: 12px;font-weight: 600">PERSONAL SKILLS</span>
+                        </div>
+                        <div class="col-md-8" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 40px;float: right"></div>
+                        <div class="col-md-12" style="width: 100%;margin-top: 12px">
+                            <ul id="skills_data_li">
+                                <li style="font-size:18px;margin-bottom: 5px">Developed or implemented new procedures or systems</li>
+                                <li style="font-size:18px;margin-bottom: 5px">Saved money for the company</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4" style="float: left;margin-top: 20px" >
+                            <img src="../static/img/resume_1/personal_info.png" width="40px"><span style="padding: 12px;font-weight: 600">PERSONAL DETAILS</span>
+                        </div>
+                        <div class="col-md-8" style= " border-top: rgb(130, 146, 238) solid 1px;margin-top: 40px;float: right"></div>
+                            <div class="col-md-12" style="margin-top: 12px">
+                                <div style="width:50%;float: left;">
+                                    <p id="fathername">Father's Name   :</p>
+                                </div>
+                                <div style="width:50%;float: right;">
+                                   <p id="mothername">Mother's Name</p>
+                                </div>
+                                   <p id="permanentaddress">Permanent Address    :    </p>
+                            </div>
 
                             <div class="col-md-12" style="margin-top: 50px">
                                 <h4>Declaration</h4>
@@ -114,7 +130,7 @@
                             </div>
                             <div class="col-md-6" style="margin-top: 20px">
                                     ____________________________<br>
-                                    <span id="n_declaration"></span>
+                                    <span id="n_declaration"></span>		
                                     
                             </div>
                             <div class="col-md-6" style="margin-top: 20px">
@@ -190,12 +206,12 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="city">Course / Graduation</label>
-                                <input type="text" class="form-control" id="course" placeholder="enter your course name."  >
+                                <input type="text" class="form-control" id="course" placeholder="Enter your course name."  >
                                 <div style="color: red;display: none" id="co_err">**enter Course.</div>
                             </div>  
                             <div class="col-md-6">
                                 <label for="city">College / Institute</label>
-                                <input type="text" class="form-control" id="college" placeholder="enter your state."  >
+                                <input type="text" class="form-control" id="college" placeholder="Enter your college name."  >
                                 <div style="color: red;display: none" id="col_err"> **enter College.</div>
                             </div> 
                             <div class="col-md-4">
@@ -219,7 +235,7 @@
                             </div> 
                             <div class="col-md-4">
                                 <label for="city">Graduated Year</label>
-                                <input type="number" min="1900" max="2019" class="form-control" id="year" placeholder="enter your state."  >
+                                <input type="number" min="1990" max="2060" class="form-control" id="year" placeholder="Enter year."  >
                                 <div style="color: red;display: none" id="year_err"> **enter valid year.</div>
                             </div> 
                             <div class="col-md-2">
@@ -308,7 +324,7 @@
 
                             <div style="margin-bottom: 20px;">
                                 <button class="btn btn-primary" type="submit" >Submit form</button>
-                                <a href="#" class="btn btn-danger">Close</a>
+                                <a href="#" class="btn btn-danger">Cancel</a>
                             </div>
 
                     </form>
