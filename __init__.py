@@ -46,7 +46,7 @@ def afficheGraph(api_key):
     data = cursor.fetchall()
     conn.close()
     if api_key == 5625719273:
-        return render_template('graph.html', data=data)
+        return render_template('graphique.html', data=data)
     return "api_key !!"
 
 if(__name__ == "__main__"):
