@@ -28,7 +28,7 @@ def ReadBDD(post_id):
     data = cursor.fetchall()
     conn.close()
 
-    if post_id != 5625719273:
+    if post_id != 5625719273: 
         return "API_key not avalaible"
     else:
     # Rendre le template HTML et transmettre les données
