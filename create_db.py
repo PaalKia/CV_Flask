@@ -7,7 +7,7 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO clients (nom, prenom, messages) VALUES (?, ?, ?)",('DUPONT', 'Emilie', 'Je veux te recruter'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('DUPONT', 'Emilie', 'Je veux te recruter'))
 
 
 
