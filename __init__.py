@@ -20,14 +20,17 @@ def resume_2():
 def resume_template():
     return render_template("resume_template.html")
 
-@app.route('/consultation/')
-def ReadBDD():
+@app.route('/consultation/<int:post_id>')
+def ReadBDD(post_id):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM clients;')
     data = cursor.fetchall()
     conn.close()
-    
+
+    if post_id != 5625719273:
+        return "API_key not avalaible"
+    else:
     # Rendre le template HTML et transmettre les données
     return render_template('read_data.html', data=data)
 
