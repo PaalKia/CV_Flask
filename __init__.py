@@ -34,21 +34,6 @@ def ReadBDD(post_id):
     # Rendre le template HTML et transmettre les données
     return render_template('read_data.html', data=data)
 
-@app.route('/chart_data/<api_key>')
-def chart_data(api_key):
-    if api_key != '5625719273':
-        return "API_key not available"
-
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.execute('SELECT Jour, COUNT(*) as Messages FROM clients GROUP BY Jour;')
-    data = cursor.fetchall()
-    conn.close()
-
-    # Convertir les données en un format compatible avec le graphique
-    chart_data = [{'Jour': entry[0], 'Messages': entry[1]} for entry in data]
-
-    return jsonify({'results': chart_data})
 
 if(__name__ == "__main__"):
     app.run()
