@@ -8,16 +8,17 @@ app = Flask(__name__) #creating flask app name
 def home():
     return render_template("index.html")
 
-@app.route('/consultation/')
-def ReadBDD():
+@app.route('/consultation/<int:api_key>')
+def afficheListe(api_key):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM clients;')
+    cursor.execute('SELECT * FROM clients')
     data = cursor.fetchall()
     conn.close()
-    
-    # Rendre le template HTML et transmettre les données
-    return render_template('read_data.html', data=data)
+
+    if api_key == 5625719273:
+        return render_template('read_data.html', data=data)
+    return "api_key !!"
 
 @app.route('/fiche_client/<int:post_id>')
 def Readfiche(post_id):
