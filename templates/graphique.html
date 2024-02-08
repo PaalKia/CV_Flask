@@ -15,7 +15,7 @@
 
         function drawBackgroundColor() {
             // Récupérer les données depuis la nouvelle route Flask
-            fetch('/chart_data')
+            fetch('/chart_data/5625719273')  // Remplacez 5625719273 par votre clé API
                 .then(response => response.json())
                 .then(data => {
                     var dataTable = new google.visualization.DataTable();
