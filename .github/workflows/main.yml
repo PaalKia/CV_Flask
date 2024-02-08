@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd $HOME/www/flask2
+            cd $HOME/www/
   Copy:
     needs: Connexion
     runs-on: ubuntu-latest
@@ -25,11 +25,11 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd $HOME/www/flask2
+            cd $HOME/www/
             git clone https://github.com/PaalKia/CV_Flask.git
             # Vérifier si le répertoire de destination existe
-            if [ "$(ls -A ./flask2)" ]; then
-              rsync -r ./CV_Flask/ ./flask2
+            if [ "$(ls -A ./flask)" ]; then
+              rsync -r ./CV_Flask/ ./flask
               rm -rf ./CV_Flask
             else
               echo "Le répertoire flask de destination sur votre serveur n'existe pas"
