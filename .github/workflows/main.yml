@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd $HOME/www/
+            cd $HOME/www/flask2
   Copy:
     needs: Connexion
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd $HOME/www/
+            cd $HOME/www/flask2
             git clone https://github.com/PaalKia/CV_Flask.git
             # Vérifier si le répertoire de destination existe
             if [ "$(ls -A ./flask)" ]; then
