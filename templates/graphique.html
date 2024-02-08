@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Métrique</title>
+    <meta charset="UTF-8" />
+    <title>Metric</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
+
 <body>
     <div id="chart_div"></div>
-
     <script>
         google.charts.load('current', { packages: ['corechart'] });
         google.charts.setOnLoadCallback(drawBackgroundColor);
 
         function drawBackgroundColor() {
-            // Récupérer les données depuis la nouvelle route Flask
-            fetch('/chart_data/5625719273')  // Remplacez 5625719273 par votre clé API
-                .then(response => response.json())
-                .then(data => {
-                    var dataTable = new google.visualization.DataTable();
-                    dataTable.addColumn('string', 'Jour');
-                    dataTable.addColumn('number', 'Messages');
+            function drawChart(data) {
+                var dataTable = new google.visualization.DataTable();
+                dataTable.addColumn('string', 'Date');
+                dataTable.addColumn('number', 'Valeur');
 
-                    data.results.forEach(entry => {
-                        dataTable.addRow([entry.Jour, entry.Messages]);
-                    });
-
-                    var options = {
-                        title: 'Messages clients',
-                        curveType: 'function',
-                        legend: { position: 'bottom' }
-                    };
-
-                    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-                    chart.draw(dataTable, options);
+                data.results.forEach(entry => {
+                    // Assuming entry is an array with timestamp and message values
+                    var date = new Date(entry[1]); // entry[1] is the timestamp field
+                    dataTable.addRow([date.toLocaleDateString(), 1]); // Assuming each entry represents one message
                 });
+
+                var options = {
+                    title: 'Nombre de Messages Reçus par Jour',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+                chart.draw(dataTable, options);
+            }
+
+            // Replace the following line with your actual fetch code
+            // fetch('/your_message_count_api_endpoint/5625719273')
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         drawChart(data);
+            //     });
+
+            // For testing purposes, using hardcoded data
+            var testData = {
+                "results": [
+                    [1, "2024-02-08 10:19:11", "DUPONT", "Emilie", "Je veux te recruter"]
+                ]
+            };
+            drawChart(testData);
         }
     </script>
 </body>
+
 </html>
