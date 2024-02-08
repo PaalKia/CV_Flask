@@ -27,5 +27,27 @@ def Readfiche(post_id):
     data = cursor.fetchall()
     conn.close()
 
+@app.route('/paris/<int:api_key>')
+def meteo(api_key):
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM clients')
+    data = cursor.fetchall()
+    conn.close()
+    if api_key == 5625719273:
+        return jsonify(results=data)
+    return "api_key !!"
+
+@app.route('/graphique/<int:api_key>')
+def afficheGraph(api_key):
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM clients')
+    data = cursor.fetchall()
+    conn.close()
+    if api_key == 5625719273:
+        return render_template('graph.html', data=data)
+    return "api_key !!"
+
 if(__name__ == "__main__"):
     app.run() (modifié)
